@@ -1,0 +1,17 @@
+cc_library {
+  name: "libamvdec",
+  srcs: ["amvdec/amlv4l.c","amvdec/amvideo.c","amvdec/ionv4l.c","amvdec/ionvideo.c"],
+  local_include_dirs: ["amvdec/include","amavutils/include"],
+  header_libs: ["libhardware_headers"],
+  shared_libs: [
+    "libutils",
+    "libmedia",
+    "libz",
+    "libbinder",
+    "libcutils",
+    "libc",
+    "libamavutils",
+    "liblog",
+  ],
+  proprietary: true,
+}
